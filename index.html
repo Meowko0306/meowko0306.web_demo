@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="reset.css">
+	<link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
+	<style>
+
+		h2, h3 {
+			color: #00303F;
+		}
+		 .header {
+			display: flex;
+			background-color: #00303F;
+		}
+		.header .wrap{
+			display: flex;
+			width: 960px;
+			margin: auto;
+			}
+		.header .logo{
+			display: inline-block;
+			padding: 6px 6px 0px 6px;
+		}
+		.header nav {
+			text-align: right;
+			width: 100%;
+			font-size: 0;
+		}
+		.header nav a {
+			font-size: 16px;
+			display: inline-block;
+			line-height: 50px;
+			text-decoration: none;
+			color: #CAE4DB;
+			padding: 0 10px;
+			font-family: 'Recursive', sans-serif;
+			border-bottom: 2px solid #00303F;
+		}
+		.header nav a:hover {
+			background-color: #f2d388;
+			color: #00303F;
+			border-bottom: 2px solid #a7d2cb;
+		}
+
+		.banner {
+			font-size: 0;
+		}
+		.banner img {
+			width: 100%;
+		}
+
+		.path {
+			width: 100%;
+			background-color: #e9e7da;
+			margin: 0 0 20px 0;
+					}
+		.path ul {
+			display: flex;
+			width: 960px;
+			margin: auto;
+		}
+		.path li {
+			position: relative;
+			display: inline-block;
+			padding: 6px 8px;
+		}
+		.path li a {
+			color: #aaa;
+			font-size: 14px;
+			text-decoration: none;
+		}
+
+		.path li + li::before{
+			content:'/';
+			color: #aaa;
+			position: absolute;
+			left: 0;
+		}
+
+		.about {
+			padding: 10px 0 60px;
+		}
+
+		.wrap {
+			width: 960px;
+			margin: auto;
+		}
+
+		.about > h2{
+			width: 100%;
+			font-size: 42px;
+			text-align: center;
+			padding: 20px 0;
+		}
+		.about > p{
+			width: 600px;
+			margin: auto;
+			padding: 0px 0px 40px;
+			
+
+		}
+		.about .wrap {
+			display: flex;
+		}
+		.about .item {
+			width: 278px;
+			border: 1px solid #aaa;
+			margin: 0 10px;
+			padding: 10px;
+
+		}
+		.about img {
+			width: 100%;
+		}
+
+		.item h3 {
+			padding: 5px;
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		.product {
+			background-color: #7a9d96;
+			}
+		.product .wrap {
+			display: flex;
+		}
+		.product .item {
+			width: 50%;
+		}
+		.product img {
+			width: 100%;
+			vertical-align: bottom;
+					}
+		.product .pic {
+			padding: 0 10px;
+		}
+		.product .text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0 20px;
+			text-align: center;
+		}
+		.service {
+			padding: 40px 0;
+			background-color: #CAE4DB;
+			margin: 0 0 50px 0;
+		}
+		.service > h2 {
+			width: 960px;
+			margin: auto;
+			text-align: center;
+			font-size: 42px;
+			padding-bottom: 40px
+
+		}
+		.service > p {
+			width: 600px;
+			margin: auto;
+			text-align: center;
+			padding-bottom: 20px;
+		}
+		.service .wrap {
+			display: flex;
+
+		}
+		.service .item {
+			width: 300px;
+			margin: 0 10px;
+			text-align: center;
+		}
+		.service .item p {
+			text-align: left;
+		}
+		.service .item img{
+			width: 100%;
+			border-radius: 10% 10% 10% 10%;
+		}
+
+
+		.footer {
+			width: 100%;
+			text-align: center;
+			background-color: #000;
+			color: #888;
+			padding: 20px 0;
+			position: fixed;
+			bottom: 0;
+
+		}
+
+
+
+	</style>
+</head>
+
+
+<body>
+
+	<div class="header">
+		<div class="wrap">
+		<a href="#" class="logo">
+			<img src="http://picsum.photos/200/40?rendom=1" alt="網站名稱">
+		</a>
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Product</a>
+			<a href="#">News</a>
+			<a href="#">Contect</a>
+			<a href="#">Sitemap</a>
+		</nav>
+		</div>
+	</div>
+
+	<div class="banner">
+		<img src="http://picsum.photos/1200/300?rendom=2">
+	</div>
+	<div class="path">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">Home</a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="about">
+		
+		<h2>ABOUT</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nesciunt est facilis hic dolores vel nemo saepe, rem natus aperiam!</p>
+		
+
+		<div class="wrap">
+			<div class="item">
+				<img src="http://picsum.photos/200/150?rendom=3" alt="">
+				<h3>Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere minima accusamus eligendi obcaecati molestias aspernatur recusandae omnis non sint suscipit?</p>
+			</div>
+			<div class="item">
+				<img src="http://picsum.photos/200/150?rendom=4" alt="">
+				<h3>Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit impedit provident illo commodi perferendis repudiandae libero dolorem. Nam dolorum, sed.</p>
+			</div>
+			<div class="item">
+				<img src="http://picsum.photos/200/150?rendom=5" alt="">
+				<h3>Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quam totam, quasi exercitationem voluptatum autem? Obcaecati nulla numquam error quidem.</p>
+			</div>
+		</div>
+	</div>
+
+<div class="product">
+	<div class="wrap">
+		<div class="item pic">
+			<img src="http://picsum.photos/600/300?rendom=6" alt="">
+		</div>
+		<div class="item text">
+			<h3>Title</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit expedita, qui cum consectetur provident vel rerum aspernatur distinctio culpa possimus similique hic magni iste optio, dolorum perferendis reprehenderit modi animi.</p>
+		</div>
+	</div>
+</div>
+
+<div class="service">
+	<h2>Service</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consequatur ea ipsa tenetur. Laudantium, laboriosam.</p>
+	<div class="wrap">
+		<div class="item">
+			<img src="http://picsum.photos/150/100?rendom=7" alt="">
+			<h3>Title</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias labore officiis ducimus libero, neque eum. Eaque qui vel eius obcaecati!</p>
+		</div>
+		<div class="item">
+			<img src="http://picsum.photos/150/100?rendom=7" alt="">
+			<h3>Title</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui accusantium, maxime consequatur voluptatibus cumque possimus esse debitis nihil rem at!</p>
+		</div>
+		<div class="item">
+			<img src="http://picsum.photos/150/100?rendom=7" alt="">
+			<h3>Title</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur saepe repellat ratione id rem eveniet vel nihil similique voluptas maxime?</p>
+		</div>
+		<div class="item">
+			<img src="http://picsum.photos/150/100?rendom=7" alt="">
+			<h3>Title</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laudantium veritatis quis mollitia quidem reiciendis laboriosam error ipsum eos maxime.</p>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	&copy; copyright 2020 by Gina
+</div>
+</body>
+</html>
