@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Noto+Sans+TC:wght@300&family=Ubuntu+Mono:ital@1&display=swap" rel="stylesheet">
+	
+	<style>
+
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			line-height: 1.5em;
+			}
+		/*!
+ * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Licensed under MIT
+ */
+
+.loading-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000000aa;
+	z-index: 10;
+
+	}
+.loading {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;	
+}
+
+
+.la-square-jelly-box,
+.la-square-jelly-box > div {
+    position: relative;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.la-square-jelly-box {
+    display: block;
+    font-size: 0;
+    color: #fff;
+}
+.la-square-jelly-box.la-dark {
+    color: #333;
+}
+.la-square-jelly-box > div {
+    display: inline-block;
+    float: none;
+    background-color: currentColor;
+    border: 0 solid currentColor;
+}
+.la-square-jelly-box {
+    width: 52px;
+    height: 52px;
+}
+.la-square-jelly-box > div:nth-child(1),
+.la-square-jelly-box > div:nth-child(2) {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+.la-square-jelly-box > div:nth-child(1) {
+    top: -25%;
+    z-index: 1;
+    height: 100%;
+    border-radius: 10%;
+    -webkit-animation: square-jelly-box-animate .6s -.1s linear infinite;
+       -moz-animation: square-jelly-box-animate .6s -.1s linear infinite;
+         -o-animation: square-jelly-box-animate .6s -.1s linear infinite;
+            animation: square-jelly-box-animate .6s -.1s linear infinite;
+}
+.la-square-jelly-box > div:nth-child(2) {
+    bottom: -9%;
+    height: 10%;
+    background: #000;
+    border-radius: 50%;
+    opacity: .2;
+    -webkit-animation: square-jelly-box-shadow .6s -.1s linear infinite;
+       -moz-animation: square-jelly-box-shadow .6s -.1s linear infinite;
+         -o-animation: square-jelly-box-shadow .6s -.1s linear infinite;
+            animation: square-jelly-box-shadow .6s -.1s linear infinite;
+}
+.la-square-jelly-box.la-sm {
+    width: 16px;
+    height: 16px;
+}
+.la-square-jelly-box.la-2x {
+    width: 64px;
+    height: 64px;
+}
+.la-square-jelly-box.la-3x {
+    width: 96px;
+    height: 96px;
+}
+/*
+ * Animations
+ */
+@-webkit-keyframes square-jelly-box-animate {
+    17% {
+        border-bottom-right-radius: 10%;
+    }
+    25% {
+        -webkit-transform: translateY(25%) rotate(22.5deg);
+                transform: translateY(25%) rotate(22.5deg);
+    }
+    50% {
+        border-bottom-right-radius: 100%;
+        -webkit-transform: translateY(50%) scale(1, .9) rotate(45deg);
+                transform: translateY(50%) scale(1, .9) rotate(45deg);
+    }
+    75% {
+        -webkit-transform: translateY(25%) rotate(67.5deg);
+                transform: translateY(25%) rotate(67.5deg);
+    }
+    100% {
+        -webkit-transform: translateY(0) rotate(90deg);
+                transform: translateY(0) rotate(90deg);
+    }
+}
+@-moz-keyframes square-jelly-box-animate {
+    17% {
+        border-bottom-right-radius: 10%;
+    }
+    25% {
+        -moz-transform: translateY(25%) rotate(22.5deg);
+             transform: translateY(25%) rotate(22.5deg);
+    }
+    50% {
+        border-bottom-right-radius: 100%;
+        -moz-transform: translateY(50%) scale(1, .9) rotate(45deg);
+             transform: translateY(50%) scale(1, .9) rotate(45deg);
+    }
+    75% {
+        -moz-transform: translateY(25%) rotate(67.5deg);
+             transform: translateY(25%) rotate(67.5deg);
+    }
+    100% {
+        -moz-transform: translateY(0) rotate(90deg);
+             transform: translateY(0) rotate(90deg);
+    }
+}
+@-o-keyframes square-jelly-box-animate {
+    17% {
+        border-bottom-right-radius: 10%;
+    }
+    25% {
+        -o-transform: translateY(25%) rotate(22.5deg);
+           transform: translateY(25%) rotate(22.5deg);
+    }
+    50% {
+        border-bottom-right-radius: 100%;
+        -o-transform: translateY(50%) scale(1, .9) rotate(45deg);
+           transform: translateY(50%) scale(1, .9) rotate(45deg);
+    }
+    75% {
+        -o-transform: translateY(25%) rotate(67.5deg);
+           transform: translateY(25%) rotate(67.5deg);
+    }
+    100% {
+        -o-transform: translateY(0) rotate(90deg);
+           transform: translateY(0) rotate(90deg);
+    }
+}
+@keyframes square-jelly-box-animate {
+    17% {
+        border-bottom-right-radius: 10%;
+    }
+    25% {
+        -webkit-transform: translateY(25%) rotate(22.5deg);
+           -moz-transform: translateY(25%) rotate(22.5deg);
+             -o-transform: translateY(25%) rotate(22.5deg);
+                transform: translateY(25%) rotate(22.5deg);
+    }
+    50% {
+        border-bottom-right-radius: 100%;
+        -webkit-transform: translateY(50%) scale(1, .9) rotate(45deg);
+           -moz-transform: translateY(50%) scale(1, .9) rotate(45deg);
+             -o-transform: translateY(50%) scale(1, .9) rotate(45deg);
+                transform: translateY(50%) scale(1, .9) rotate(45deg);
+    }
+    75% {
+        -webkit-transform: translateY(25%) rotate(67.5deg);
+           -moz-transform: translateY(25%) rotate(67.5deg);
+             -o-transform: translateY(25%) rotate(67.5deg);
+                transform: translateY(25%) rotate(67.5deg);
+    }
+    100% {
+        -webkit-transform: translateY(0) rotate(90deg);
+           -moz-transform: translateY(0) rotate(90deg);
+             -o-transform: translateY(0) rotate(90deg);
+                transform: translateY(0) rotate(90deg);
+    }
+}
+@-webkit-keyframes square-jelly-box-shadow {
+    50% {
+        -webkit-transform: scale(1.25, 1);
+                transform: scale(1.25, 1);
+    }
+}
+@-moz-keyframes square-jelly-box-shadow {
+    50% {
+        -moz-transform: scale(1.25, 1);
+             transform: scale(1.25, 1);
+    }
+}
+@-o-keyframes square-jelly-box-shadow {
+    50% {
+        -o-transform: scale(1.25, 1);
+           transform: scale(1.25, 1);
+    }
+}
+@keyframes square-jelly-box-shadow {
+    50% {
+        -webkit-transform: scale(1.25, 1);
+           -moz-transform: scale(1.25, 1);
+             -o-transform: scale(1.25, 1);
+                transform: scale(1.25, 1);
+    }
+}
+/*----------------------------------------*/
+		img {
+			vertical-align: bottom;
+		}
+		.item-group {
+			width: 100%;
+			max-width: 1400px;
+			margin: auto;
+		}		
+		.banner img {
+			width: 100%;
+		}
+		.about .title h2 {
+			color: #fff;
+		}
+
+		.title {
+			margin: 0 0px 20px;
+			padding: 30px 20px;
+			background-color: #96858f;
+			font-family: 'Ubuntu Mono', monospace;
+		}
+		.title h2 {
+			text-align: center;
+			font-size: 42px;
+			filter: drop-shadow(2px 2px 10px rgba(0,0,0,.6));
+		}
+		.title p {
+			font-size: 20px;
+			text-align: center;
+			color: #fff;
+		}
+		.about .item-group .pic {
+			padding: 50px 50px 10px 50px;
+		}
+		.about .item-group .text {
+			text-align: center;
+			padding: 0 20px;
+
+		}
+		.about .item-group img {
+			border-radius: 50%;
+			border: 1px solid #aaa;
+			box-shadow: 10px 5px 30px rgba(0, 0, 0, .2);
+		}
+		/*.item {
+			margin: 0 10px 20px;
+		}*/
+
+		.item .pic img {
+			width: 100%;
+		}
+		.item h3 {
+			font-size: 24px;
+			font-family: 'Ubuntu Mono', monospace;
+
+		}
+
+		.text{
+			font-family: 'Noto Sans TC', sans-serif;
+			font-size: 18px;
+		}
+
+		.products {
+			background-color: #9099a2;
+			color: #fff;
+			padding: 10px;
+			margin: 10px 0 0 0;
+		}
+		
+
+		.footer {
+			background-color: #192231;
+			color: #aaa;
+			text-align: center;
+			width: 100%;
+			padding: 20px 0;
+		}
+		.service {
+			background-color: #ccdfcb;
+			padding: 20px;
+		}
+
+	@media(max-width:767px){
+		.service {
+			display: none;
+		}
+	}
+
+	
+	@media screen and (min-width: 768px){
+
+		.title p {
+			font-size: 16px;
+		}
+		.item-group {
+			display: flex;
+		}
+		.about .item-group {
+			display: flex;
+			width: 960px;
+			padding: 20px 0px;
+
+		}
+		.about .item-group .item {
+			width: 400px;
+			border: 1px solid #aaa;
+			margin: 0 10px;
+			padding: 10px 0px;
+		}
+		.about .item:hover {
+			position: relative;
+			top: -10px;	
+		}
+		.about .item-group .pic {
+			padding: 20px;
+		}
+		.products {
+			
+			width: 100%;
+			margin: 20px 0 0 0;
+		}
+		.products .item {
+			display: flex;
+			margin: 0;				
+		}
+
+		.products .item .pic,
+		.products .item .text {
+			width: 50%;
+			margin: 0px 20px;
+			
+		}
+		.products img {
+			width: 100%;
+		}
+		.products .item .text {
+			display: flex;
+			box-sizing: border-box;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.service .item{
+			padding: 10px;
+			margin: 0;
+		}
+		.service .item:hover {
+			color: #ccdfcb;
+			background-color: #4abdac;
+		}
+
+		
+
+
+			
+	}
+		
+
+
+
+
+	</style>
+		
+</head>
+<body>
+
+	<div class="banner">
+		<img src="http://picsum.photos/1400/500?rendom=1" alt="banner">
+	</div>
+
+	<div class="about">
+		<div class="wrap">
+			<div class="title">
+				
+				<h2>ABOUT US</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia explicabo facilis, adipisci recusandae est impedit fuga eveniet iusto aut .</p>
+			</div>
+			
+			<div class="item-group">
+				<div class="item">
+					<div class="pic">
+						<img src="http://picsum.photos/200/200?rendom=11" alt="">
+					</div>
+					<div class="text">
+						<h3>Title</h3>
+						<p>智慧人群就算加強處罰認識不在避免經濟郵箱真是進程進了終於我不，資產巨大內地清晰什麼表演設定雙方所需。</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="pic">
+						<img src="http://picsum.photos/200/200?rendom=12" alt="">
+					</div>
+					<div class="text">
+						<h3>Title</h3>
+						<p>恐怕他人許多藝術表現再次來源，高中只需。</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="pic">
+						<img src="http://picsum.photos/200/200?rendom=13" alt="">
+					</div>
+					<div class="text">
+						<h3>Title</h3>
+						<p>衛生區別風情投訴溫州虛擬計劃外貿手機身份道路。</p>
+					</div>
+				</div>
+				
+									
+
+			</div>
+		</div>
+	</div>
+
+	<div class="products">		
+			<div class="item-group">
+				<div class="item">
+					<div class="pic">
+						<img src="http://picsum.photos/300/200?rendom=14" alt="">
+					</div>
+					<div class="text">
+						<h3>Title</h3>
+						<p>智慧人群就算加強處罰認識不在避免經濟郵箱真是進程進了終於我不，資產巨大內地清晰什麼表演設定雙方所需。</p>
+					</div>
+				</div>
+			</div>		
+	</div>
+
+
+	<div class="service">
+		<div class="wrap">
+			<div class="item-group">
+				<div class="item">
+					<div class="pic">
+						<img src="http://picsum.photos/300/200?rendom=21" alt="">
+					</div>
+					<div class="text">
+						<h3>Title</h3>
+						<p>智慧人群就算加強處罰認識不在避免經濟郵箱真是進程進了終於我不，資產巨大內地清晰什麼表演設定雙方所需。</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="pic">
+						<img src="http://picsum.photos/300/200?rendom=22" alt="">
+					</div>
+					<div class="text">
+						<h3>Title</h3>
+						<p>智慧人群就算加強處罰認識不在避免經濟郵箱真是進程進了終於我不，資產巨大內地清晰什麼表演設定雙方所需。</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="pic">
+						<img src="http://picsum.photos/300/200?rendom=23" alt="">
+					</div>
+					<div class="text">
+						<h3>Title</h3>
+						<p>智慧人群就算加強處罰認識不在避免經濟郵箱真是進程進了終於我不，資產巨大內地清晰什麼表演設定雙方所需。</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="pic">
+						<img src="http://picsum.photos/300/200?rendom=24" alt="">
+					</div>
+					<div class="text">
+						<h3>Title</h3>
+						<p>智慧人群就算加強處罰認識不在避免經濟郵箱真是進程進了終於我不，資產巨大內地清晰什麼表演設定雙方所需。</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="footer">
+		&copyright made by Gina
+	</div>
+
+
+	<div class="loading-wrap">
+		<div class="loading la-square-jelly-box">
+			<div></div>
+			<div></div>
+			
+		</div>
+	</div>
+
+
+
+ <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+	$(document).ready(function() {
+		setTimeout(function() {
+			$('.loading-wrap').fadeOut('slow');}, 2000);
+	});
+	
+</script>
+
+</body>
+</html>
