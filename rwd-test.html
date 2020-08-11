@@ -12,7 +12,7 @@
 			margin: 0;
 			padding: 0;
 			list-style: none;
-			line-height: 1.5em;
+			
 			}
 		/*!
  * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
@@ -27,7 +27,7 @@
 	width: 100%;
 	height: 100%;
 	background-color: #000000aa;
-	z-index: 10;
+	z-index: 999;
 
 	}
 .loading {
@@ -230,6 +230,103 @@
     }
 }
 /*----------------------------------------*/
+		#menu_control {
+			position: absolute;
+			opacity: 0;
+			z-index: -2;
+		}
+		#menu_control:checked ~ .header nav {
+			opacity: 1;
+			z-index: 10;
+		}
+		#menu_control:checked ~ .menu_btn {
+			content: '\2716';
+			position: absolute;
+			height: 4px;
+			left: 4px;
+			width: 30px;
+			background-color: #0ff;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		
+		.header {
+			width: 100%;
+			position: relative;
+			height: 50px;
+			background-color: #3c3c3c;
+			
+		}
+		.logo {
+			width: 60px;
+			height: 40px;		
+			margin-left: 10px;
+		}
+		
+		.logo a {
+			display: block;
+
+		}
+		.menu_btn {
+			width: 40px;
+			height: 40px;
+			display: block;
+			position: absolute;
+			top: 5px;
+			right: 10px;
+			border-radius: 10px;
+		}
+		.menu_btn span{
+			opacity: 0;
+			width: 1px;
+			height: 1px;
+			display: block;
+			overflow: hidden;
+		}
+		.menu_btn::before {
+			content: '';
+			position: absolute;
+			height: 4px;
+			left: 4px;
+			width: 30px;
+			background-color: #aaa;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			box-shadow: 0px 8px 0px #aaa,
+						0px -8px 0px #aaa
+		}
+		nav {
+			width: 100%;
+			height: (100vh - 50px);/*視窗高度*/
+			position: absolute;
+			top: 50px;
+			transition: .5s;
+			padding: 50px 0;
+			background-color: rgb(98, 110, 96, .8);
+			opacity: 0;
+		}
+		.menu-on {
+			background-color: #eee;
+			color: #626e60;
+		}
+		nav a {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			color: #fff;
+			padding: 10px 20px;
+			border-bottom: 1px solid #fff;
+
+		}
+		nav a:hover {
+			background-color: #ccc;
+			color: #626e60;
+			opacity: 1;
+		}
+
+
 		img {
 			vertical-align: bottom;
 		}
@@ -260,6 +357,7 @@
 			font-size: 20px;
 			text-align: center;
 			color: #fff;
+
 		}
 		.about .item-group .pic {
 			padding: 50px 50px 10px 50px;
@@ -307,10 +405,7 @@
 			width: 100%;
 			padding: 20px 0;
 		}
-		.service {
-			background-color: #ccdfcb;
-			padding: 20px;
-		}
+		
 
 	@media(max-width:767px){
 		.service {
@@ -320,6 +415,38 @@
 
 	
 	@media screen and (min-width: 768px){
+		
+		.menu_btn {
+			display: none;
+		}
+
+		.header {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;/*內容元件左右分散  */
+			align-items: center;
+		}
+		.logo a {
+			display: block;			 
+		}
+		nav {			
+			right: 50px;
+			top: 0;
+			display: flex;
+			width: auto;
+			height: auto;
+			opacity: 1;
+			padding: inherit;
+			background-color: inherit;
+		}
+		nav a {
+			border-bottom: none;
+			line-height: 50px;	
+			padding: 0 10px;
+			background-color: none;		
+
+		}
+
 
 		.title p {
 			font-size: 16px;
@@ -371,6 +498,15 @@
 			flex-direction: column;
 			justify-content: center;
 		}
+		.service {
+			display: flex;
+			width: 100%;
+			background-color: #ccdfcb;
+			padding: 20px;
+		}
+		.service .wrap {
+			margin: auto;
+		}
 		.service .item{
 			padding: 10px;
 			margin: 0;
@@ -394,7 +530,26 @@
 		
 </head>
 <body>
+	<input type="checkbox" id="menu_control">
 
+	<div class="header">
+		<h1 class="logo">
+			<a href="#"><img src="http://picsum.photos/60/40?rendom=10" alt=""></a>
+		</h1>
+		<label for="menu_control" class="menu_btn"><!--漢堡選單圖示-->
+			<span>Menu</span> 
+		</label>
+			<nav>
+			<a href="#" class="menu-on">Home</a>
+			<a href="#" class="menu">About</a>
+			<a href="#" class="menu">Product</a>
+			<a href="#" class="menu">Contact</a>
+			<a href="#" class="menu">Sitemap</a>
+		
+		</nav>
+	</div>
+	</div>
+	
 	<div class="banner">
 		<img src="http://picsum.photos/1400/500?rendom=1" alt="banner">
 	</div>
